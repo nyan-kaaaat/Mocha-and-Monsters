@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dq6s70w0ol1ou"]
+[gd_scene load_steps=2 format=3 uid="uid://dq6s70w0ol1ou"]
+
+[ext_resource type="Script" path="res://controller/main_menu.gd" id="1_h501w"]
 
 [node name="MainMenuView" type="Control"]
 layout_mode = 3
@@ -9,6 +11,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_h501w")
 
 [node name="Start Button" type="Button" parent="."]
 texture_filter = 1
@@ -35,3 +38,6 @@ offset_right = 152.0
 offset_bottom = 198.0
 theme_override_font_sizes/font_size = 45
 text = "How to Play"
+
+[connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Instruction Button" to="." method="_on_instruction_button_pressed"]

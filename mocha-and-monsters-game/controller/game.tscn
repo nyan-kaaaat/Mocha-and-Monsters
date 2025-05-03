@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ci86k2o47mbg4"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CoffeeMaker" type="Node2D" parent="."]
+
+[node name="Money" type="Node2D" parent="."]
+
+[node name="Affection" type="Node2D" parent="."]
+
+[node name="Levels(?)" type="Node2D" parent="."]
