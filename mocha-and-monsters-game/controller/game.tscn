@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=4 format=3 uid="uid://ci86k2o47mbg4"]
 
 [ext_resource type="Texture2D" uid="uid://c0f5c5nfo8qe4" path="res://view/m&m background.png" id="1_7drek"]
+[ext_resource type="Script" path="res://controller/game.gd" id="1_ipyyi"]
+[ext_resource type="Texture2D" uid="uid://bkf3s8tp8huup" path="res://view/m&m ingredients.png" id="1_jn5vo"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_ipyyi")
 
-[node name="CoffeeMaker" type="Node2D" parent="."]
+[node name="CoffeeMaker" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="GetIngredient" type="Button" parent="CoffeeMaker"]
+offset_right = 8.0
+offset_bottom = 8.0
+button_mask = 7
+icon = ExtResource("1_jn5vo")
 
 [node name="Money" type="Node2D" parent="."]
 
@@ -15,6 +26,7 @@
 [node name="Control" type="Control" parent="."]
 visible = false
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -35,5 +47,8 @@ size_flags_horizontal = 0
 texture = ExtResource("1_7drek")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(581, 330)
 texture = ExtResource("1_7drek")
+
+[connection signal="pressed" from="CoffeeMaker/GetIngredient" to="." method="_on_get_ingredient_pressed"]
