@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=2 format=3 uid="uid://ci86k2o47mbg4"]
+
+[ext_resource type="Texture2D" uid="uid://c0f5c5nfo8qe4" path="res://view/m&m background.png" id="1_7drek"]
 
 [node name="Game" type="Node2D"]
 
@@ -9,3 +11,29 @@
 [node name="Affection" type="Node2D" parent="."]
 
 [node name="Levels(?)" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3648.0
+offset_bottom = 2052.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_7drek")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(581, 330)
+texture = ExtResource("1_7drek")
