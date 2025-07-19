@@ -1,19 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=6 format=3 uid="uid://ci86k2o47mbg4"]
 
-[ext_resource type="Texture2D" uid="uid://c0f5c5nfo8qe4" path="res://view/m&m background.png" id="1_7drek"]
+[ext_resource type="Texture2D" uid="uid://c0f5c5nfo8qe4" path="res://assets/m&m background.png" id="1_7drek"]
 [ext_resource type="Script" path="res://controller/game.gd" id="1_ipyyi"]
-[ext_resource type="Texture2D" uid="uid://bkf3s8tp8huup" path="res://view/m&m ingredients.png" id="1_jn5vo"]
+[ext_resource type="Texture2D" uid="uid://dr6y02okbt6bq" path="res://assets/syrup bottle1.png" id="2_jrssr"]
+[ext_resource type="Texture2D" uid="uid://cbw47u3di53e3" path="res://assets/syrup bottle2.png" id="3_r6ufv"]
+[ext_resource type="Texture2D" uid="uid://836aixdkl3h5" path="res://assets/syrup bottle3.png" id="4_5d7w5"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ipyyi")
 
 [node name="Ingredient Cabinet" type="Node2D" parent="."]
+visibility_layer = 3
 
-[node name="GetIngredient" type="Button" parent="Ingredient Cabinet"]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="SyrupFlowerButton" type="Button" parent="Ingredient Cabinet"]
+offset_right = 244.0
+offset_bottom = 797.0
 button_mask = 7
-icon = ExtResource("1_jn5vo")
+icon = ExtResource("2_jrssr")
+flat = true
+expand_icon = true
+
+[node name="SyrupButtonBean" type="Button" parent="Ingredient Cabinet"]
+offset_left = 259.0
+offset_top = 41.0
+offset_right = 474.0
+offset_bottom = 789.0
+icon = ExtResource("3_r6ufv")
+flat = true
+expand_icon = true
+
+[node name="SyrupButtonCube" type="Button" parent="Ingredient Cabinet"]
+offset_left = 507.0
+offset_top = 32.0
+offset_right = 735.0
+offset_bottom = 820.0
+icon = ExtResource("4_5d7w5")
+flat = true
+expand_icon = true
 
 [node name="Money" type="Node2D" parent="."]
 
@@ -21,32 +44,19 @@ icon = ExtResource("1_jn5vo")
 
 [node name="Levels(?)" type="Node2D" parent="."]
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
-layout_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
-visible = false
-
-[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 3648.0
-offset_bottom = 2052.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 texture = ExtResource("1_7drek")
+expand_mode = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(581, 330)
-texture = ExtResource("1_7drek")
-
-[connection signal="pressed" from="Ingredient Cabinet/GetIngredient" to="." method="_on_get_ingredient_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/SyrupFlowerButton" to="." method="_on_get_ingredient_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/SyrupButtonBean" to="." method="_on_syrup_button_bean_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/SyrupButtonCube" to="." method="_on_syrup_button_cube_pressed"]

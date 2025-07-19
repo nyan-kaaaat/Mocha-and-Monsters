@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0f5c5nfo8qe4"
-path="res://.godot/imported/m&m background.png-3f35051250ab103792e2e8e5ab3f18e0.ctex"
+uid="uid://836aixdkl3h5"
+path="res://.godot/imported/syrup bottle3.png-b662e52e0dbde3b4eaa1b8d2f372e5a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://view/m&m background.png"
-dest_files=["res://.godot/imported/m&m background.png-3f35051250ab103792e2e8e5ab3f18e0.ctex"]
+source_file="res://assets/syrup bottle3.png"
+dest_files=["res://.godot/imported/syrup bottle3.png-b662e52e0dbde3b4eaa1b8d2f372e5a3.ctex"]
 
 [params]
 
