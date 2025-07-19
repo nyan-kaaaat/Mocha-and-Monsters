@@ -7,11 +7,9 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ipyyi")
 
-[node name="CoffeeMaker" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+[node name="Ingredient Cabinet" type="Node2D" parent="."]
 
-[node name="GetIngredient" type="Button" parent="CoffeeMaker"]
+[node name="GetIngredient" type="Button" parent="Ingredient Cabinet"]
 offset_right = 8.0
 offset_bottom = 8.0
 button_mask = 7
@@ -51,4 +49,4 @@ visible = false
 position = Vector2(581, 330)
 texture = ExtResource("1_7drek")
 
-[connection signal="pressed" from="CoffeeMaker/GetIngredient" to="." method="_on_get_ingredient_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/GetIngredient" to="." method="_on_get_ingredient_pressed"]
