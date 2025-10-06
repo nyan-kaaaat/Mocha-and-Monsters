@@ -18,8 +18,19 @@ func _on_coffee_beans_pressed() -> void:
 	print("coffee beans pressed")
 
 
-# coffe grinder buttons
+func _on_matcha_pressed() -> void:
+	print("matcha pressed")
 
+
+func _on_black_tea_pressed() -> void:
+	print("black tea pressed")
+
+
+func _on_green_tea_pressed() -> void:
+	print("green tea pressed")
+
+
+# coffe grinder buttons
 func _on_cup_size_pressed() -> void:
 	print("smallest cup pressed")
 
@@ -38,3 +49,16 @@ func _on_cup_size_large_pressed() -> void:
 
 func _on_cup_size_largest_pressed() -> void:
 	print("largest cup pressed")
+
+
+# UI dopdown buttons
+func _on_up_pressed() -> void:
+	print("up")
+
+
+func _on_left_pressed() -> void:
+	print("left")
+
+
+func _on_right_pressed() -> void:
+	print("right")

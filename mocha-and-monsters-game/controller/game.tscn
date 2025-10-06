@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=17 format=3 uid="uid://ci86k2o47mbg4"]
 
-[ext_resource type="Script" path="res://controller/game.gd" id="1_ipyyi"]
+[ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://controller/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
 [ext_resource type="Texture2D" uid="uid://dr6y02okbt6bq" path="res://assets/syrup bottle1.png" id="2_jrssr"]
 [ext_resource type="Texture2D" uid="uid://c07uar85xrw0o" path="res://assets/coffeecups_small.png" id="3_ae8tl"]
@@ -11,6 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://b2q4ccut1hv3g" path="res://assets/coffeebean.png" id="5_a0x3u"]
 [ext_resource type="Texture2D" uid="uid://b3p8qbn41xxdu" path="res://assets/coffeecups_largest.png" id="6_1jx18"]
 [ext_resource type="Texture2D" uid="uid://bjrx0ds23n86o" path="res://assets/m&m_background.png" id="11_0bsjd"]
+[ext_resource type="Texture2D" uid="uid://crqaiakqdw0pu" path="res://assets/syrup_labels.png" id="12_2evmg"]
+[ext_resource type="Texture2D" uid="uid://bv4b3a5ieie72" path="res://assets/m&m_button.png" id="12_u7811"]
+[ext_resource type="Texture2D" uid="uid://dc1molk3jm47f" path="res://assets/matcha.png" id="13_1uis1"]
+[ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
+[ext_resource type="Texture2D" uid="uid://bcvg0omfc821y" path="res://assets/tea2.png" id="15_qmxlg"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ipyyi")
@@ -31,11 +36,7 @@ expand_mode = 1
 [node name="CoffeeMaker" type="Control" parent="."]
 z_index = 1
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 
 [node name="CupSizeSmallest" type="Button" parent="CoffeeMaker"]
 z_as_relative = false
@@ -54,6 +55,7 @@ flat = true
 expand_icon = true
 
 [node name="CupSizeSmall" type="Button" parent="CoffeeMaker"]
+layout_mode = 0
 offset_left = 388.0
 offset_top = 120.0
 offset_right = 443.0
@@ -63,6 +65,7 @@ flat = true
 expand_icon = true
 
 [node name="CupSizeMedium" type="Button" parent="CoffeeMaker"]
+layout_mode = 0
 offset_left = 436.0
 offset_top = 119.0
 offset_right = 487.0
@@ -73,6 +76,7 @@ flat = true
 expand_icon = true
 
 [node name="CupSizeLarge" type="Button" parent="CoffeeMaker"]
+layout_mode = 0
 offset_left = 481.0
 offset_top = 100.0
 offset_right = 540.0
@@ -82,6 +86,7 @@ flat = true
 expand_icon = true
 
 [node name="CupSizeLargest" type="Button" parent="CoffeeMaker"]
+layout_mode = 0
 offset_left = 535.0
 offset_top = 89.0
 offset_right = 600.0
@@ -91,8 +96,6 @@ flat = true
 expand_icon = true
 
 [node name="Ingredient Cabinet" type="Control" parent="."]
-light_mask = 2
-visibility_layer = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,6 +105,7 @@ grow_vertical = 2
 
 [node name="SyrupFlowerButton" type="Button" parent="Ingredient Cabinet"]
 z_index = 1
+layout_mode = 0
 offset_left = 875.0
 offset_top = 182.0
 offset_right = 946.0
@@ -115,6 +119,7 @@ expand_icon = true
 [node name="SyrupButtonBean" type="Button" parent="Ingredient Cabinet"]
 z_index = 1
 z_as_relative = false
+layout_mode = 0
 offset_left = 944.0
 offset_top = 197.0
 offset_right = 1019.0
@@ -125,15 +130,17 @@ expand_icon = true
 
 [node name="SyrupButtonCube" type="Button" parent="Ingredient Cabinet"]
 z_index = 1
-offset_left = 1006.0
-offset_top = 47.0
-offset_right = 1075.0
-offset_bottom = 562.0
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 196.0
+offset_right = 1080.0
+offset_bottom = 416.0
 icon = ExtResource("4_5d7w5")
 flat = true
 expand_icon = true
 
 [node name="CoffeeBeans" type="Button" parent="Ingredient Cabinet"]
+layout_mode = 0
 offset_left = 786.0
 offset_top = 160.0
 offset_right = 885.0
@@ -142,11 +149,93 @@ icon = ExtResource("5_a0x3u")
 flat = true
 expand_icon = true
 
+[node name="SyrupLabels" type="TextureRect" parent="Ingredient Cabinet"]
+z_index = 1
+layout_mode = 0
+offset_left = 855.0
+offset_top = 332.00003
+offset_right = 1702.655
+offset_bottom = 517.3218
+scale = Vector2(0.26425844, 0.31836522)
+texture = ExtResource("12_2evmg")
+
+[node name="Matcha" type="Button" parent="Ingredient Cabinet"]
+layout_mode = 0
+offset_left = 770.00006
+offset_top = 320.0
+offset_right = 1143.0
+offset_bottom = 600.0
+scale = Vector2(0.2747328, 0.30633235)
+icon = ExtResource("13_1uis1")
+flat = true
+
+[node name="BlackTea" type="Button" parent="Ingredient Cabinet"]
+layout_mode = 0
+offset_left = 880.00006
+offset_top = 217.0
+offset_right = 1116.0001
+offset_bottom = 453.0
+scale = Vector2(0.3220366, 0.33665913)
+icon = ExtResource("14_mtqyb")
+flat = true
+
+[node name="GreenTea" type="Button" parent="Ingredient Cabinet"]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 219.0
+offset_right = 1458.0
+offset_bottom = 424.0
+scale = Vector2(0.27002296, 0.37092626)
+icon = ExtResource("15_qmxlg")
+flat = true
+
 [node name="Money" type="Node2D" parent="."]
 
 [node name="Affection" type="Node2D" parent="."]
 
 [node name="Levels(?)" type="Node2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Up" type="Button" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.711
+anchor_bottom = 16.104
+offset_left = 469.0
+offset_top = -3.0
+offset_right = -453.44006
+offset_bottom = -585.16003
+grow_horizontal = 2
+icon = ExtResource("12_u7811")
+flat = true
+expand_icon = true
+
+[node name="Left" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 445.0
+offset_right = 219.0
+offset_bottom = 536.573
+rotation = -1.5707964
+icon = ExtResource("12_u7811")
+flat = true
+expand_icon = true
+
+[node name="Right" type="Button" parent="UI"]
+layout_mode = 0
+offset_left = 1163.0
+offset_top = 219.0
+offset_right = 1398.0
+offset_bottom = 299.0
+rotation = 1.5707964
+icon = ExtResource("12_u7811")
+flat = true
+expand_icon = true
 
 [connection signal="pressed" from="CoffeeMaker/CupSizeSmallest" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/CupSizeSmall" to="." method="_on_cup_size_small_pressed"]
@@ -157,3 +246,9 @@ expand_icon = true
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonBean" to="." method="_on_syrup_button_bean_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonCube" to="." method="_on_syrup_button_cube_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/CoffeeBeans" to="." method="_on_coffee_beans_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/Matcha" to="." method="_on_matcha_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/BlackTea" to="." method="_on_black_tea_pressed"]
+[connection signal="pressed" from="Ingredient Cabinet/GreenTea" to="." method="_on_green_tea_pressed"]
+[connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
+[connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
