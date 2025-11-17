@@ -9,15 +9,6 @@ func _ready() -> void:
 	cup_size = null
 	ingridients = []
 
-func setName(string_name) -> void:
-	"""
-	Sets name of the order
-	
-	pre-conditions:
-		name: a string
-	"""
-	name = name
-
 func setCup(cup) -> void:
 	"""
 	sets desired cup size

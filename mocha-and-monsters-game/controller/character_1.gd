@@ -1,0 +1,1 @@
+class_name Character1 extends Customer
