@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu53t2ydphxy5"]
+
+[ext_resource type="Script" uid="uid://b07gn0dtghem5" path="res://controller/order.gd" id="1_80hm5"]
+
+[node name="Order" type="Node2D"]
+script = ExtResource("1_80hm5")
