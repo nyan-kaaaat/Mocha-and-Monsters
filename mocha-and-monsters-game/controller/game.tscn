@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=19 format=3 uid="uid://ci86k2o47mbg4"]
 
 [ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://controller/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dc1molk3jm47f" path="res://assets/matcha.png" id="13_1uis1"]
 [ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
 [ext_resource type="Texture2D" uid="uid://bcvg0omfc821y" path="res://assets/tea2.png" id="15_qmxlg"]
+[ext_resource type="Script" uid="uid://b07gn0dtghem5" path="res://controller/order.gd" id="18_mtqyb"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ipyyi")
@@ -237,6 +238,9 @@ rotation = 1.5707964
 icon = ExtResource("12_u7811")
 flat = true
 expand_icon = true
+
+[node name="Order" type="Node2D" parent="."]
+script = ExtResource("18_mtqyb")
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/CupSizeSmall" to="." method="_on_cup_size_small_pressed"]
