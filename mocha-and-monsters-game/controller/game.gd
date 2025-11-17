@@ -40,6 +40,7 @@ func _on_green_tea_pressed() -> void:
 func _on_cup_size_pressed() -> void:
 	var cup4oz_instance = cup4oz.instantiate()
 	cup4oz_instance.position = Vector2(471.0, 343.0)
+	add_child(cup4oz_instance)
 	order.setCup(cup4oz_instance)
 	
 
