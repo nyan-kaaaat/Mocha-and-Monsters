@@ -1,7 +1,5 @@
 extends Node2D
 
-var Order = load("res://controller/order.gd")
-
 var order
 
 var cup4oz = preload("res://controller/cup_4_oz.tscn")
@@ -42,13 +40,16 @@ func _on_green_tea_pressed() -> void:
 func _on_cup_size_pressed() -> void:
 	var cup4oz_instance = cup4oz.instantiate()
 	cup4oz_instance.position = Vector2(471.0, 343.0)
-	add_child(cup4oz_instance)
 	order.setCup(cup4oz_instance)
 	
 
 
 func _on_cup_size_small_pressed() -> void:
-	print("small cup pressed")
+	# create cup object and change this to reflect the new
+	# object later
+	var cup4oz_instance = cup4oz.instantiate()
+	cup4oz_instance.position = Vector2(471.0, 343.0)
+	order.setCup(cup4oz_instance)
 
 
 func _on_cup_size_medium_pressed() -> void:
