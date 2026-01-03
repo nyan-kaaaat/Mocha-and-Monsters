@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene load_steps=27 format=3 uid="uid://ci86k2o47mbg4"]
 
 [ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://controller/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
@@ -11,8 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://b2q4ccut1hv3g" path="res://assets/coffeebean.png" id="5_a0x3u"]
 [ext_resource type="Texture2D" uid="uid://b3p8qbn41xxdu" path="res://assets/coffeecups_largest.png" id="6_1jx18"]
 [ext_resource type="PackedScene" uid="uid://c7q0j183do25j" path="res://controller/cup_4_oz.tscn" id="8_1uis1"]
+[ext_resource type="PackedScene" uid="uid://dqn30k8gxhw1" path="res://controller/cup_8_oz.tscn" id="9_r5gwg"]
+[ext_resource type="PackedScene" uid="uid://cdihk8qdblm4j" path="res://controller/cup_12_oz.tscn" id="10_jgv1u"]
 [ext_resource type="Texture2D" uid="uid://bjrx0ds23n86o" path="res://assets/m&m_background.png" id="11_0bsjd"]
+[ext_resource type="PackedScene" uid="uid://bugltn5wp5yjj" path="res://controller/cup_16_oz.tscn" id="11_q1s1o"]
 [ext_resource type="Texture2D" uid="uid://crqaiakqdw0pu" path="res://assets/syrup_labels.png" id="12_2evmg"]
+[ext_resource type="PackedScene" uid="uid://def0ts504hm3" path="res://controller/cup_20_oz.tscn" id="12_c0t26"]
 [ext_resource type="Texture2D" uid="uid://bv4b3a5ieie72" path="res://assets/m&m_button.png" id="12_u7811"]
 [ext_resource type="Texture2D" uid="uid://dc1molk3jm47f" path="res://assets/matcha.png" id="13_1uis1"]
 [ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
@@ -20,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://controller/order.tscn" id="18_mtqyb"]
 [ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="19_b6jee"]
 [ext_resource type="Script" uid="uid://bt42nlgrxv2hl" path="res://controller/character_1.gd" id="20_r5gwg"]
+[ext_resource type="PackedScene" uid="uid://cmps2a5qb3k1n" path="res://controller/night_time.tscn" id="25_q1s1o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7x3b2"]
 animations = [{
@@ -71,7 +76,7 @@ icon = ExtResource("2_2pce8")
 flat = true
 expand_icon = true
 
-[node name="CupSizeSmall" type="Button" parent="CoffeeMaker"]
+[node name="Cup8OzButton" type="Button" parent="CoffeeMaker"]
 layout_mode = 0
 offset_left = 388.0
 offset_top = 120.0
@@ -81,7 +86,7 @@ icon = ExtResource("3_ae8tl")
 flat = true
 expand_icon = true
 
-[node name="CupSizeMedium" type="Button" parent="CoffeeMaker"]
+[node name="Cup12OzButton" type="Button" parent="CoffeeMaker"]
 layout_mode = 0
 offset_left = 436.0
 offset_top = 119.0
@@ -92,7 +97,7 @@ icon = ExtResource("4_22b6i")
 flat = true
 expand_icon = true
 
-[node name="CupSizeLarge" type="Button" parent="CoffeeMaker"]
+[node name="Cup16OzButton" type="Button" parent="CoffeeMaker"]
 layout_mode = 0
 offset_left = 481.0
 offset_top = 100.0
@@ -102,7 +107,7 @@ icon = ExtResource("5_0moje")
 flat = true
 expand_icon = true
 
-[node name="CupSizeLargest" type="Button" parent="CoffeeMaker"]
+[node name="Cup20OzButtton" type="Button" parent="CoffeeMaker"]
 layout_mode = 0
 offset_left = 535.0
 offset_top = 89.0
@@ -115,6 +120,18 @@ expand_icon = true
 [node name="Cup4Oz" parent="CoffeeMaker" instance=ExtResource("8_1uis1")]
 visible = false
 position = Vector2(471, 343)
+
+[node name="Cup8Oz" parent="CoffeeMaker" instance=ExtResource("9_r5gwg")]
+visible = false
+
+[node name="Cup12Oz" parent="CoffeeMaker" instance=ExtResource("10_jgv1u")]
+visible = false
+
+[node name="Cup16Oz" parent="CoffeeMaker" instance=ExtResource("11_q1s1o")]
+visible = false
+
+[node name="Cup20Oz" parent="CoffeeMaker" instance=ExtResource("12_c0t26")]
+visible = false
 
 [node name="Ingredient Cabinet" type="Control" parent="."]
 layout_mode = 3
@@ -262,11 +279,17 @@ animation = &"talking"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character1"]
 
+[node name="NightTime" parent="." instance=ExtResource("25_q1s1o")]
+visible = false
+
+[node name="DaytimeTimer" type="Timer" parent="."]
+wait_time = 10.0
+
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
-[connection signal="pressed" from="CoffeeMaker/CupSizeSmall" to="." method="_on_cup_size_small_pressed"]
-[connection signal="pressed" from="CoffeeMaker/CupSizeMedium" to="." method="_on_cup_size_medium_pressed"]
-[connection signal="pressed" from="CoffeeMaker/CupSizeLarge" to="." method="_on_cup_size_large_pressed"]
-[connection signal="pressed" from="CoffeeMaker/CupSizeLargest" to="." method="_on_cup_size_largest_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup12OzButton" to="." method="_on_cup_size_medium_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup16OzButton" to="." method="_on_cup_size_large_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup20OzButtton" to="." method="_on_cup_size_largest_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupFlowerButton" to="." method="_on_get_ingredient_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonBean" to="." method="_on_syrup_button_bean_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonCube" to="." method="_on_syrup_button_cube_pressed"]
@@ -277,3 +300,4 @@ animation = &"talking"
 [connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
+[connection signal="timeout" from="DaytimeTimer" to="." method="_on_daytime_timer_timeout"]

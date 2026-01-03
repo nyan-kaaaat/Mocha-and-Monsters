@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://def0ts504hm3"]
+
+[ext_resource type="Texture2D" uid="uid://b3p8qbn41xxdu" path="res://assets/coffeecups_largest.png" id="1_rnxks"]
+
+[node name="Cup20Oz" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.1415927
+scale = Vector2(0.26, 0.263)
+texture = ExtResource("1_rnxks")
