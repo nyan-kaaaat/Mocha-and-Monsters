@@ -22,9 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
 [ext_resource type="Texture2D" uid="uid://bcvg0omfc821y" path="res://assets/tea2.png" id="15_qmxlg"]
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://controller/order.tscn" id="18_mtqyb"]
-[ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="19_b6jee"]
 [ext_resource type="Script" uid="uid://bt42nlgrxv2hl" path="res://controller/character_1.gd" id="20_r5gwg"]
-[ext_resource type="Script" uid="uid://d2uv6j4re1ahx" path="res://controller/patcience_timer.gd" id="24_q1s1o"]
+[ext_resource type="PackedScene" uid="uid://bg4qf71smfhrp" path="res://controller/customer.tscn" id="23_jgv1u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7x3b2"]
 animations = [{
@@ -267,18 +266,7 @@ expand_icon = true
 
 [node name="Order" parent="." unique_id=103519613 instance=ExtResource("18_mtqyb")]
 
-[node name="Customer" type="Node2D" parent="." unique_id=1521962107]
-script = ExtResource("19_b6jee")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Customer" unique_id=372842905]
-
-[node name="PatcienceTimer" type="Timer" parent="Customer" unique_id=991909876]
-wait_time = 30.0
-script = ExtResource("24_q1s1o")
-
-[node name="ProgressBar" type="ProgressBar" parent="Customer" unique_id=1591237239]
-offset_right = 4.0
-offset_bottom = 27.0
+[node name="Customer" parent="." unique_id=227004382 instance=ExtResource("23_jgv1u")]
 
 [node name="Character1" type="Node2D" parent="." unique_id=163868113]
 script = ExtResource("20_r5gwg")
@@ -288,6 +276,7 @@ sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
 [node name="CustomerSpawner" type="Timer" parent="." unique_id=1115954576]
+wait_time = 5.0
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
@@ -304,6 +293,4 @@ animation = &"talking"
 [connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
-[connection signal="timeout" from="Customer/PatcienceTimer" to="Customer" method="_on_patcience_timer_timeout"]
-[connection signal="value_changed" from="Customer/ProgressBar" to="Customer/PatcienceTimer" method="_on_progress_bar_value_changed"]
 [connection signal="timeout" from="CustomerSpawner" to="." method="_on_customer_spawner_timeout"]

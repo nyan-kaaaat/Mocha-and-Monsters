@@ -8,8 +8,11 @@ var cup12oz = preload("res://controller/cup_12_oz.tscn")
 var cup16oz = preload("res://controller/cup_16_oz.tscn")
 var cup20oz = preload("res://controller/cup_20_oz.tscn")
 
+var customer = preload("res://controller/customer.tscn")
+
 func _ready() -> void:
-	order = Order.new()
+	$CustomerSpawner.start()
+	pass
 
 # the buttons on the ingredients shelf node
 func _on_get_ingredient_pressed() -> void:
@@ -92,4 +95,6 @@ func _on_right_pressed() -> void:
 	print("right")
 
 func _on_customer_spawner_timeout() -> void:
-	pass # Replace with function body.
+	var customer_instance = customer.instantiate()
+	add_child(customer_instance)
+	print("customer spawned")
