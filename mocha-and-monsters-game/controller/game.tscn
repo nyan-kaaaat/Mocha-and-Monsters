@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ci86k2o47mbg4"]
+[gd_scene format=3 uid="uid://ci86k2o47mbg4"]
 
 [ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://controller/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
@@ -39,13 +39,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=498613444]
 script = ExtResource("1_ipyyi")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=183785022]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1731685000]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -55,12 +55,12 @@ size_flags_horizontal = 0
 texture = ExtResource("11_0bsjd")
 expand_mode = 1
 
-[node name="CoffeeMaker" type="Control" parent="."]
+[node name="CoffeeMaker" type="Control" parent="." unique_id=579242603]
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Cup4OzButton" type="Button" parent="CoffeeMaker"]
+[node name="Cup4OzButton" type="Button" parent="CoffeeMaker" unique_id=500526207]
 z_as_relative = false
 layout_mode = 1
 anchors_preset = 1
@@ -76,7 +76,7 @@ icon = ExtResource("2_2pce8")
 flat = true
 expand_icon = true
 
-[node name="Cup8OzButton" type="Button" parent="CoffeeMaker"]
+[node name="Cup8OzButton" type="Button" parent="CoffeeMaker" unique_id=1593990591]
 layout_mode = 0
 offset_left = 388.0
 offset_top = 120.0
@@ -86,7 +86,7 @@ icon = ExtResource("3_ae8tl")
 flat = true
 expand_icon = true
 
-[node name="Cup12OzButton" type="Button" parent="CoffeeMaker"]
+[node name="Cup12OzButton" type="Button" parent="CoffeeMaker" unique_id=13710041]
 layout_mode = 0
 offset_left = 436.0
 offset_top = 119.0
@@ -97,7 +97,7 @@ icon = ExtResource("4_22b6i")
 flat = true
 expand_icon = true
 
-[node name="Cup16OzButton" type="Button" parent="CoffeeMaker"]
+[node name="Cup16OzButton" type="Button" parent="CoffeeMaker" unique_id=280844436]
 layout_mode = 0
 offset_left = 481.0
 offset_top = 100.0
@@ -107,7 +107,7 @@ icon = ExtResource("5_0moje")
 flat = true
 expand_icon = true
 
-[node name="Cup20OzButtton" type="Button" parent="CoffeeMaker"]
+[node name="Cup20OzButtton" type="Button" parent="CoffeeMaker" unique_id=410544508]
 layout_mode = 0
 offset_left = 535.0
 offset_top = 89.0
@@ -117,27 +117,27 @@ icon = ExtResource("6_1jx18")
 flat = true
 expand_icon = true
 
-[node name="Cup4Oz" parent="CoffeeMaker" instance=ExtResource("8_1uis1")]
+[node name="Cup4Oz" parent="CoffeeMaker" unique_id=677470892 instance=ExtResource("8_1uis1")]
 visible = false
 position = Vector2(471, 343)
 
-[node name="Cup8Oz" parent="CoffeeMaker" instance=ExtResource("9_r5gwg")]
+[node name="Cup8Oz" parent="CoffeeMaker" unique_id=53636999 instance=ExtResource("9_r5gwg")]
 visible = false
 
-[node name="Cup12Oz" parent="CoffeeMaker" instance=ExtResource("10_jgv1u")]
+[node name="Cup12Oz" parent="CoffeeMaker" unique_id=816012366 instance=ExtResource("10_jgv1u")]
 visible = false
 
-[node name="Cup16Oz" parent="CoffeeMaker" instance=ExtResource("11_q1s1o")]
+[node name="Cup16Oz" parent="CoffeeMaker" unique_id=642594354 instance=ExtResource("11_q1s1o")]
 visible = false
 
-[node name="Cup20Oz" parent="CoffeeMaker" instance=ExtResource("12_c0t26")]
+[node name="Cup20Oz" parent="CoffeeMaker" unique_id=1489143016 instance=ExtResource("12_c0t26")]
 visible = false
 
-[node name="Ingredient Cabinet" type="Control" parent="."]
+[node name="Ingredient Cabinet" type="Control" parent="." unique_id=223028646]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="SyrupFlowerButton" type="Button" parent="Ingredient Cabinet"]
+[node name="SyrupFlowerButton" type="Button" parent="Ingredient Cabinet" unique_id=869504339]
 z_index = 1
 layout_mode = 0
 offset_left = 875.0
@@ -150,7 +150,7 @@ icon = ExtResource("2_jrssr")
 flat = true
 expand_icon = true
 
-[node name="SyrupButtonBean" type="Button" parent="Ingredient Cabinet"]
+[node name="SyrupButtonBean" type="Button" parent="Ingredient Cabinet" unique_id=1063240860]
 z_index = 1
 z_as_relative = false
 layout_mode = 0
@@ -162,7 +162,7 @@ icon = ExtResource("3_r6ufv")
 flat = true
 expand_icon = true
 
-[node name="SyrupButtonCube" type="Button" parent="Ingredient Cabinet"]
+[node name="SyrupButtonCube" type="Button" parent="Ingredient Cabinet" unique_id=110354887]
 z_index = 1
 layout_mode = 0
 offset_left = 1009.0
@@ -173,7 +173,7 @@ icon = ExtResource("4_5d7w5")
 flat = true
 expand_icon = true
 
-[node name="CoffeeBeans" type="Button" parent="Ingredient Cabinet"]
+[node name="CoffeeBeans" type="Button" parent="Ingredient Cabinet" unique_id=797342166]
 layout_mode = 0
 offset_left = 786.0
 offset_top = 160.0
@@ -183,7 +183,7 @@ icon = ExtResource("5_a0x3u")
 flat = true
 expand_icon = true
 
-[node name="SyrupLabels" type="TextureRect" parent="Ingredient Cabinet"]
+[node name="SyrupLabels" type="TextureRect" parent="Ingredient Cabinet" unique_id=869611887]
 z_index = 1
 layout_mode = 0
 offset_left = 855.0
@@ -193,7 +193,7 @@ offset_bottom = 517.3218
 scale = Vector2(0.26425844, 0.31836522)
 texture = ExtResource("12_2evmg")
 
-[node name="Matcha" type="Button" parent="Ingredient Cabinet"]
+[node name="Matcha" type="Button" parent="Ingredient Cabinet" unique_id=984228112]
 layout_mode = 0
 offset_left = 770.00006
 offset_top = 320.0
@@ -203,7 +203,7 @@ scale = Vector2(0.2747328, 0.30633235)
 icon = ExtResource("13_1uis1")
 flat = true
 
-[node name="BlackTea" type="Button" parent="Ingredient Cabinet"]
+[node name="BlackTea" type="Button" parent="Ingredient Cabinet" unique_id=840833471]
 layout_mode = 0
 offset_left = 880.00006
 offset_top = 217.0
@@ -213,7 +213,7 @@ scale = Vector2(0.3220366, 0.33665913)
 icon = ExtResource("14_mtqyb")
 flat = true
 
-[node name="GreenTea" type="Button" parent="Ingredient Cabinet"]
+[node name="GreenTea" type="Button" parent="Ingredient Cabinet" unique_id=392305608]
 layout_mode = 0
 offset_left = 950.0
 offset_top = 219.0
@@ -223,13 +223,13 @@ scale = Vector2(0.27002296, 0.37092626)
 icon = ExtResource("15_qmxlg")
 flat = true
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=2143280397]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Up" type="Button" parent="UI"]
+[node name="Up" type="Button" parent="UI" unique_id=1288729906]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 28.711
@@ -243,7 +243,7 @@ icon = ExtResource("12_u7811")
 flat = true
 expand_icon = true
 
-[node name="Left" type="Button" parent="UI"]
+[node name="Left" type="Button" parent="UI" unique_id=969330424]
 layout_mode = 0
 offset_left = -16.0
 offset_top = 445.0
@@ -254,7 +254,7 @@ icon = ExtResource("12_u7811")
 flat = true
 expand_icon = true
 
-[node name="Right" type="Button" parent="UI"]
+[node name="Right" type="Button" parent="UI" unique_id=163336109]
 layout_mode = 0
 offset_left = 1163.0
 offset_top = 219.0
@@ -265,24 +265,27 @@ icon = ExtResource("12_u7811")
 flat = true
 expand_icon = true
 
-[node name="Order" parent="." instance=ExtResource("18_mtqyb")]
+[node name="Order" parent="." unique_id=103519613 instance=ExtResource("18_mtqyb")]
 
-[node name="Customer" type="Node2D" parent="."]
+[node name="Customer" type="Node2D" parent="." unique_id=1521962107]
 script = ExtResource("19_b6jee")
 
-[node name="Character1" type="Node2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Customer" unique_id=372842905]
+
+[node name="PatcienceTimer" type="Timer" parent="Customer" unique_id=991909876]
+wait_time = 30.0
+
+[node name="Character1" type="Node2D" parent="." unique_id=163868113]
 script = ExtResource("20_r5gwg")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character1"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character1" unique_id=193198242]
 sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character1"]
-
-[node name="NightTime" parent="." instance=ExtResource("25_q1s1o")]
+[node name="NightTime" parent="." unique_id=1479545854 instance=ExtResource("25_q1s1o")]
 visible = false
 
-[node name="DaytimeTimer" type="Timer" parent="."]
+[node name="DaytimeTimer" type="Timer" parent="." unique_id=1268357638]
 wait_time = 10.0
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
