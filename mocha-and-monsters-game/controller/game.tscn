@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://controller/order.tscn" id="18_mtqyb"]
 [ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="19_b6jee"]
 [ext_resource type="Script" uid="uid://bt42nlgrxv2hl" path="res://controller/character_1.gd" id="20_r5gwg"]
-[ext_resource type="PackedScene" uid="uid://cmps2a5qb3k1n" path="res://controller/night_time.tscn" id="25_q1s1o"]
+[ext_resource type="Script" uid="uid://d2uv6j4re1ahx" path="res://controller/patcience_timer.gd" id="24_q1s1o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7x3b2"]
 animations = [{
@@ -274,6 +274,11 @@ script = ExtResource("19_b6jee")
 
 [node name="PatcienceTimer" type="Timer" parent="Customer" unique_id=991909876]
 wait_time = 30.0
+script = ExtResource("24_q1s1o")
+
+[node name="ProgressBar" type="ProgressBar" parent="Customer" unique_id=1591237239]
+offset_right = 4.0
+offset_bottom = 27.0
 
 [node name="Character1" type="Node2D" parent="." unique_id=163868113]
 script = ExtResource("20_r5gwg")
@@ -282,11 +287,10 @@ script = ExtResource("20_r5gwg")
 sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
-[node name="NightTime" parent="." unique_id=1479545854 instance=ExtResource("25_q1s1o")]
-visible = false
-
 [node name="DaytimeTimer" type="Timer" parent="." unique_id=1268357638]
 wait_time = 10.0
+
+[node name="CustomerSpawner" type="Timer" parent="." unique_id=1115954576]
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
@@ -303,4 +307,7 @@ wait_time = 10.0
 [connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
+[connection signal="timeout" from="Customer/PatcienceTimer" to="Customer" method="_on_patcience_timer_timeout"]
+[connection signal="value_changed" from="Customer/ProgressBar" to="Customer/PatcienceTimer" method="_on_progress_bar_value_changed"]
 [connection signal="timeout" from="DaytimeTimer" to="." method="_on_daytime_timer_timeout"]
+[connection signal="timeout" from="CustomerSpawner" to="." method="_on_customer_spawner_timeout"]
