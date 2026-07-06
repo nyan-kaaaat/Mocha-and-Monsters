@@ -287,9 +287,6 @@ script = ExtResource("20_r5gwg")
 sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
-[node name="DaytimeTimer" type="Timer" parent="." unique_id=1268357638]
-wait_time = 10.0
-
 [node name="CustomerSpawner" type="Timer" parent="." unique_id=1115954576]
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
@@ -309,5 +306,4 @@ wait_time = 10.0
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
 [connection signal="timeout" from="Customer/PatcienceTimer" to="Customer" method="_on_patcience_timer_timeout"]
 [connection signal="value_changed" from="Customer/ProgressBar" to="Customer/PatcienceTimer" method="_on_progress_bar_value_changed"]
-[connection signal="timeout" from="DaytimeTimer" to="." method="_on_daytime_timer_timeout"]
 [connection signal="timeout" from="CustomerSpawner" to="." method="_on_customer_spawner_timeout"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bg4qf71smfhrp"]
+
+[ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="1_7n1ij"]
+[ext_resource type="Script" uid="uid://d2uv6j4re1ahx" path="res://controller/patcience_timer.gd" id="2_47r5b"]
+
+[node name="Customer" type="Node2D" unique_id=1393005874]
+script = ExtResource("1_7n1ij")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1447794027]
+
+[node name="PatcienceTimer" type="Timer" parent="." unique_id=1318044189]
+wait_time = 30.0
+script = ExtResource("2_47r5b")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=89684585]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[connection signal="timeout" from="PatcienceTimer" to="." method="_on_patcience_timer_timeout"]
+[connection signal="value_changed" from="ProgressBar" to="PatcienceTimer" method="_on_progress_bar_value_changed"]

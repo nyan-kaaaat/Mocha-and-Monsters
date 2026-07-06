@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq6s70w0ol1ou"]
+[gd_scene format=3 uid="uid://dq6s70w0ol1ou"]
 
-[ext_resource type="Script" path="res://controller/main_menu.gd" id="1_h501w"]
+[ext_resource type="Script" uid="uid://ejqf3i2du8qw" path="res://controller/main_menu.gd" id="1_h501w"]
 
-[node name="MainMenuView" type="Control"]
+[node name="MainMenuView" type="Control" unique_id=622126762]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h501w")
 
-[node name="Start Button" type="Button" parent="."]
+[node name="Start Button" type="Button" parent="." unique_id=500297417]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -30,7 +30,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Start"
 
-[node name="Instruction Button" type="Button" parent="."]
+[node name="Instruction Button" type="Button" parent="." unique_id=546828200]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 85.0
