@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="1_7n1ij"]
 [ext_resource type="Script" uid="uid://d2uv6j4re1ahx" path="res://controller/patcience_timer.gd" id="2_47r5b"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n1ij"]
+bg_color = Color(0.27058825, 0.9411765, 0.3882353, 1)
+
 [node name="Customer" type="Node2D" unique_id=227004382]
 script = ExtResource("1_7n1ij")
 
@@ -13,8 +16,12 @@ wait_time = 30.0
 script = ExtResource("2_47r5b")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=989782584]
-offset_right = 4.0
-offset_bottom = 27.0
+offset_right = 186.0
+offset_bottom = 17.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_7n1ij")
+step = 1.0
+value = 100.0
+show_percentage = false
 
 [connection signal="timeout" from="PatcienceTimer" to="." method="_on_patcience_timer_timeout"]
 [connection signal="value_changed" from="ProgressBar" to="PatcienceTimer" method="_on_progress_bar_value_changed"]
