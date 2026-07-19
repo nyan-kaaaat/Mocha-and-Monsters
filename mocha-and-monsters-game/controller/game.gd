@@ -10,10 +10,6 @@ var cup20oz = preload("res://controller/cup_20_oz.tscn")
 
 var customer = preload("res://controller/customer.tscn")
 
-func _ready() -> void:
-	$CustomerSpawner.start()
-	pass
-
 # the buttons on the ingredients shelf node
 func _on_get_ingredient_pressed() -> void:
 	print("flower pressed")
@@ -93,8 +89,3 @@ func _on_left_pressed() -> void:
 
 func _on_right_pressed() -> void:
 	print("right")
-
-func _on_customer_spawner_timeout() -> void:
-	var customer_instance = customer.instantiate()
-	add_child(customer_instance)
-	print("customer spawned")

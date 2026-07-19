@@ -6,7 +6,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n1ij"]
 bg_color = Color(0.27058825, 0.9411765, 0.3882353, 1)
 
-[node name="Customer" type="Node2D" unique_id=227004382]
+[node name="Customer" type="Node2D" unique_id=1261019502]
+visible = false
 script = ExtResource("1_7n1ij")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1791611802]

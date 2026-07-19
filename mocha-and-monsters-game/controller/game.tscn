@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://controller/order.tscn" id="18_mtqyb"]
 [ext_resource type="Script" uid="uid://bt42nlgrxv2hl" path="res://controller/character_1.gd" id="20_r5gwg"]
 [ext_resource type="PackedScene" uid="uid://bg4qf71smfhrp" path="res://controller/customer.tscn" id="23_jgv1u"]
+[ext_resource type="PackedScene" uid="uid://cxlj43vfjda4a" path="res://controller/front_counter.tscn" id="25_q1s1o"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7x3b2"]
 animations = [{
@@ -275,8 +276,7 @@ script = ExtResource("20_r5gwg")
 sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
-[node name="CustomerSpawner" type="Timer" parent="." unique_id=1115954576]
-wait_time = 5.0
+[node name="FrontCounter" parent="." unique_id=1140552590 instance=ExtResource("25_q1s1o")]
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
@@ -293,4 +293,3 @@ wait_time = 5.0
 [connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
-[connection signal="timeout" from="CustomerSpawner" to="." method="_on_customer_spawner_timeout"]
