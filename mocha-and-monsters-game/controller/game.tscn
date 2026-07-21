@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://controller/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
+[ext_resource type="Texture2D" uid="uid://dk6wpubbefdhf" path="res://m&m-background-coloured.png" id="2_c0t26"]
 [ext_resource type="Texture2D" uid="uid://dr6y02okbt6bq" path="res://assets/syrup bottle1.png" id="2_jrssr"]
 [ext_resource type="Texture2D" uid="uid://c07uar85xrw0o" path="res://assets/coffeecups_small.png" id="3_ae8tl"]
 [ext_resource type="Texture2D" uid="uid://cbw47u3di53e3" path="res://assets/syrup bottle2.png" id="3_r6ufv"]
@@ -13,12 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://c7q0j183do25j" path="res://controller/cup_4_oz.tscn" id="8_1uis1"]
 [ext_resource type="PackedScene" uid="uid://dqn30k8gxhw1" path="res://controller/cup_8_oz.tscn" id="9_r5gwg"]
 [ext_resource type="PackedScene" uid="uid://cdihk8qdblm4j" path="res://controller/cup_12_oz.tscn" id="10_jgv1u"]
-[ext_resource type="Texture2D" uid="uid://bjrx0ds23n86o" path="res://assets/m&m_background.png" id="11_0bsjd"]
 [ext_resource type="PackedScene" uid="uid://bugltn5wp5yjj" path="res://controller/cup_16_oz.tscn" id="11_q1s1o"]
 [ext_resource type="Texture2D" uid="uid://crqaiakqdw0pu" path="res://assets/syrup_labels.png" id="12_2evmg"]
 [ext_resource type="PackedScene" uid="uid://def0ts504hm3" path="res://controller/cup_20_oz.tscn" id="12_c0t26"]
 [ext_resource type="Texture2D" uid="uid://bv4b3a5ieie72" path="res://assets/m&m_button.png" id="12_u7811"]
 [ext_resource type="Texture2D" uid="uid://dc1molk3jm47f" path="res://assets/matcha.png" id="13_1uis1"]
+[ext_resource type="Texture2D" uid="uid://b51ycyk01pkes" path="res://controller/m&m-espresso-machine-coloured.png" id="13_6yrg1"]
 [ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
 [ext_resource type="Texture2D" uid="uid://bcvg0omfc821y" path="res://assets/tea2.png" id="15_qmxlg"]
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://controller/order.tscn" id="18_mtqyb"]
@@ -52,7 +53,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-texture = ExtResource("11_0bsjd")
+texture = ExtResource("2_c0t26")
 expand_mode = 1
 
 [node name="CoffeeMaker" type="Control" parent="." unique_id=579242603]
@@ -132,6 +133,15 @@ visible = false
 
 [node name="Cup20Oz" parent="CoffeeMaker" unique_id=1489143016 instance=ExtResource("12_c0t26")]
 visible = false
+
+[node name="ExpressoMachine" type="TextureRect" parent="CoffeeMaker" unique_id=1976278824]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 145.0
+offset_right = 673.0
+offset_bottom = 461.0
+texture = ExtResource("13_6yrg1")
+expand_mode = 1
 
 [node name="Ingredient Cabinet" type="Control" parent="." unique_id=223028646]
 layout_mode = 3
