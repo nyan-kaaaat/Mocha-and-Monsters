@@ -2,8 +2,11 @@ extends Node2D
 
 var customer = preload("res://controller/customer.tscn")
 
+var character_list = []
+
 func _ready() -> void:
-	$CustomerSpawner.start()
+	#$CustomerSpawner.start()
+	pass
 
 func _on_customer_spawner_timeout() -> void:
 	var customer_instance = customer.instantiate()

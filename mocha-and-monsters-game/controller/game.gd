@@ -8,8 +8,6 @@ var cup12oz = preload("res://controller/cup_12_oz.tscn")
 var cup16oz = preload("res://controller/cup_16_oz.tscn")
 var cup20oz = preload("res://controller/cup_20_oz.tscn")
 
-var customer = preload("res://controller/customer.tscn")
-
 # the buttons on the ingredients shelf node
 func _on_get_ingredient_pressed() -> void:
 	print("flower pressed")

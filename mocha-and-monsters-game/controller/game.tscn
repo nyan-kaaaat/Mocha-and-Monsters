@@ -280,6 +280,7 @@ expand_icon = true
 [node name="Customer" parent="." unique_id=227004382 instance=ExtResource("23_jgv1u")]
 
 [node name="Character1" type="Node2D" parent="." unique_id=163868113]
+visible = false
 script = ExtResource("20_r5gwg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character1" unique_id=193198242]
@@ -287,6 +288,7 @@ sprite_frames = SubResource("SpriteFrames_7x3b2")
 animation = &"talking"
 
 [node name="FrontCounter" parent="." unique_id=1140552590 instance=ExtResource("25_q1s1o")]
+visible = false
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
