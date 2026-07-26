@@ -5,8 +5,7 @@ var customer = preload("res://controller/customer.tscn")
 var character_list = []
 
 func _ready() -> void:
-	#$CustomerSpawner.start()
-	pass
+	$CustomerSpawner.start()
 
 func _on_customer_spawner_timeout() -> void:
 	var customer_instance = customer.instantiate()
