@@ -22,3 +22,8 @@ func customer_opinion() -> void:
 	
 func _on_patcience_timer_timeout() -> void:
 	print("customer gets mad")
+
+
+func _on_collision_shape_2d_child_entered_tree(node: Node) -> void:
+	if node.is_in_group("order"):
+		given_order = node
