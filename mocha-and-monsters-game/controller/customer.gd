@@ -26,4 +26,5 @@ func _on_patcience_timer_timeout() -> void:
 
 func _on_collision_shape_2d_child_entered_tree(node: Node) -> void:
 	if node.is_in_group("order"):
-		given_order = node
+		give_order(node)
+		compare_order()
