@@ -1,6 +1,7 @@
 extends Node2D
 
 var customer = preload("res://scenes/customer.tscn")
+var customer_instance
 
 var character_list = []
 
@@ -10,8 +11,11 @@ func _ready() -> void:
 ## spawn a customer if the cafe is empty
 func _on_customer_spawner_timeout() -> void:
 	if get_tree().get_nodes_in_group("customer").is_empty():
-		var customer_instance = customer.instantiate()
+		customer_instance = customer.instantiate()
 		add_child(customer_instance)
+		add_to_group("customer")
 		print("customer spawned")
 	else:
-		pass
+		remove_child(customer_instance)
+		remove_from_group("customer")
+		print("customer removed")
