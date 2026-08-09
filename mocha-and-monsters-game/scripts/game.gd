@@ -2,11 +2,11 @@ extends Node2D
 
 var order
 
-var cup4oz = preload("res://controller/cup_4_oz.tscn")
-var cup8oz = preload("res://controller/cup_8_oz.tscn")
-var cup12oz = preload("res://controller/cup_12_oz.tscn")
-var cup16oz = preload("res://controller/cup_16_oz.tscn")
-var cup20oz = preload("res://controller/cup_20_oz.tscn")
+var cup4oz = preload("res://scenes/cup_4_oz.tscn")
+var cup8oz = preload("res://scenes/cup_8_oz.tscn")
+var cup12oz = preload("res://scenes/cup_12_oz.tscn")
+var cup16oz = preload("res://scenes/cup_16_oz.tscn")
+var cup20oz = preload("res://scenes/cup_20_oz.tscn")
 
 # the buttons on the ingredients shelf node
 func _on_get_ingredient_pressed() -> void:

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk6wpubbefdhf"
-path="res://.godot/imported/m&m-background-coloured.png-48b4c59daf1f0c5be7d6ac8280216558.ctex"
+uid="uid://b51ycyk01pkes"
+path="res://.godot/imported/m&m-espresso-machine-coloured.png-f1730066bf8e0a023bbf5cf2c94c1797.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://m&m-background-coloured.png"
-dest_files=["res://.godot/imported/m&m-background-coloured.png-48b4c59daf1f0c5be7d6ac8280216558.ctex"]
+source_file="res://assets/m&m-espresso-machine-coloured.png"
+dest_files=["res://.godot/imported/m&m-espresso-machine-coloured.png-f1730066bf8e0a023bbf5cf2c94c1797.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends Node2D
 
-var customer = preload("res://controller/customer.tscn")
+var customer = preload("res://scenes/customer.tscn")
 
 var character_list = []
 

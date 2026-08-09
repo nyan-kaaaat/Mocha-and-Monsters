@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bu53t2ydphxy5"]
 
-[ext_resource type="Script" uid="uid://b07gn0dtghem5" path="res://controller/order.gd" id="1_80hm5"]
+[ext_resource type="Script" uid="uid://b07gn0dtghem5" path="res://scripts/order.gd" id="1_80hm5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_80hm5"]
 

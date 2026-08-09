@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxlj43vfjda4a"]
 
-[ext_resource type="Script" uid="uid://cmqnlbauqlw1m" path="res://controller/counter.gd" id="1_0kkvl"]
+[ext_resource type="Script" uid="uid://cmqnlbauqlw1m" path="res://scripts/counter.gd" id="1_0kkvl"]
 
 [node name="FrontCounter" type="Node2D" unique_id=1140552590]
 script = ExtResource("1_0kkvl")
