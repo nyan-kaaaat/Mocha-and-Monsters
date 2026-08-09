@@ -7,22 +7,21 @@ func give_order(order) -> void:
 	# give customer order object
 	self.given_order = order
 
+## if the given order matches what the customer wants, 
+## return true
 func compare_order() -> bool:
-	# if the given order matches what the customer wants,
-	# return true
+	
 	if self.given_order != null:
 		return true
 	return false
 
 func customer_opinion() -> void:
 	if compare_order() == true:
+		$AnimatedSprite2D.play("happy")
 		print("customer happy :D")
 	else:
+		$AnimatedSprite2D.play("angry")
 		print("customer disappointed")
-	
-func _on_patcience_timer_timeout() -> void:
-	print("customer gets mad")
-
 
 func _on_collision_shape_2d_child_entered_tree(node: Node) -> void:
 	if node.is_in_group("order"):

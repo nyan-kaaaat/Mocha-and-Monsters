@@ -279,9 +279,10 @@ expand_icon = true
 
 [node name="Customer" parent="." unique_id=227004382 instance=ExtResource("23_jgv1u")]
 
-[node name="Character1" type="Node2D" parent="." unique_id=163868113]
+[node name="Character1" type="Node2D" parent="." unique_id=1737176740]
 visible = false
 script = ExtResource("20_r5gwg")
+metadata/_custom_type_script = "uid://bleqtvrern3cj"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character1" unique_id=193198242]
 sprite_frames = SubResource("SpriteFrames_7x3b2")
