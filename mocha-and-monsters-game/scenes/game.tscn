@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b1jowy7a2u2p2" path="res://scripts/game.gd" id="1_ipyyi"]
 [ext_resource type="Texture2D" uid="uid://cs2lhrxfcdwpm" path="res://assets/coffeecups_smallest.png" id="2_2pce8"]
-[ext_resource type="Texture2D" uid="uid://dk6wpubbefdhf" path="res://m&m-background-coloured.png" id="2_c0t26"]
+[ext_resource type="Texture2D" uid="uid://fnxbmcfb76pq" path="res://assets/m&m-background-coloured.png" id="2_bhx41"]
 [ext_resource type="Texture2D" uid="uid://dr6y02okbt6bq" path="res://assets/syrup bottle1.png" id="2_jrssr"]
 [ext_resource type="Texture2D" uid="uid://c07uar85xrw0o" path="res://assets/coffeecups_small.png" id="3_ae8tl"]
 [ext_resource type="Texture2D" uid="uid://cbw47u3di53e3" path="res://assets/syrup bottle2.png" id="3_r6ufv"]
@@ -53,7 +53,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-texture = ExtResource("2_c0t26")
+texture = ExtResource("2_bhx41")
 expand_mode = 1
 
 [node name="CoffeeMaker" type="Control" parent="." unique_id=579242603]
