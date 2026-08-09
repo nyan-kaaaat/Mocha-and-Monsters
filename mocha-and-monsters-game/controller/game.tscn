@@ -279,7 +279,7 @@ expand_icon = true
 
 [node name="Customer" parent="." unique_id=227004382 instance=ExtResource("23_jgv1u")]
 
-[node name="Character1" type="Node2D" parent="." unique_id=1737176740]
+[node name="Character1" type="Node2D" parent="." unique_id=2104200480]
 visible = false
 script = ExtResource("20_r5gwg")
 metadata/_custom_type_script = "uid://bleqtvrern3cj"

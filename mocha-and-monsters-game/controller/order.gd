@@ -9,22 +9,11 @@ func _ready() -> void:
 	cup_size = null
 	ingridients = []
 
+## sets the order's desired cup size
 func setCup(cup) -> void:
-	"""
-	sets desired cup size
-	
-	pre-conditions:
-		cup: cup object
-	"""
 	cup_size = cup
 	print("cup added")
 
+## adds ingredients to the ingredients list
 func addIngredient(ingreddient) -> void:
-	"""
-	adds ingredients to the ingredients list
-	
-	pre-conditions:
-		ingredient: ingredient objects
-	post-conditions: cup contains ingredients and updates it to screen
-	"""
 	ingridients.append(ingreddient)
