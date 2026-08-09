@@ -3,6 +3,24 @@
 [ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://controller/customer.gd" id="1_7n1ij"]
 [ext_resource type="Script" uid="uid://d2uv6j4re1ahx" path="res://controller/patcience_timer.gd" id="2_47r5b"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n1ij"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"angry",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n1ij"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n1ij"]
@@ -11,6 +29,10 @@ bg_color = Color(0.27058825, 0.9411765, 0.3882353, 1)
 [node name="Customer" type="CharacterBody2D" unique_id=891950362]
 visible = false
 script = ExtResource("1_7n1ij")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2064702978]
+sprite_frames = SubResource("SpriteFrames_7n1ij")
+animation = &"angry"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=828049032]
 shape = SubResource("RectangleShape2D_7n1ij")
