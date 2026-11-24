@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cvxvklxt31dlf"]
+
+[ext_resource type="Texture2D" uid="uid://brod16td8x6th" path="res://assets/character-sprites/MnM-kitty-sprite.png" id="1_3ar6c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
+atlas = ExtResource("1_3ar6c")
+region = Rect2(3200, 0, 1600, 2328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suyxu"]
+atlas = ExtResource("1_3ar6c")
+region = Rect2(0, 0, 1600, 2328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]
+atlas = ExtResource("1_3ar6c")
+region = Rect2(1600, 0, 1600, 2328)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qouja"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sww3w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suyxu")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgl2t")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(1517, 2477)
+
+[node name="Character2" type="CharacterBody2D" unique_id=1700620167]
+position = Vector2(936, 363)
+scale = Vector2(0.33259794, 0.2791169)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278798889]
+sprite_frames = SubResource("SpriteFrames_qouja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903178127]
+position = Vector2(-239.5, 95.5)
+shape = SubResource("RectangleShape2D_wljb1")

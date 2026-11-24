@@ -10,7 +10,6 @@ func give_order(order) -> void:
 ## if the given order matches what the customer wants, 
 ## return true
 func compare_order() -> bool:
-	
 	if self.given_order != null:
 		return true
 	return false
