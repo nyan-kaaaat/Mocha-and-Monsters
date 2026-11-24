@@ -40,6 +40,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
+
 [node name="Game" type="Node2D" unique_id=498613444]
 script = ExtResource("1_ipyyi")
 
@@ -278,15 +280,17 @@ expand_icon = true
 [node name="Order" parent="." unique_id=103519613 instance=ExtResource("18_mtqyb")]
 
 [node name="Customer" parent="." unique_id=227004382 instance=ExtResource("23_jgv1u")]
+visible = true
 
-[node name="Character1" type="Node2D" parent="." unique_id=2104200480]
+[node name="Character1" type="CharacterBody2D" parent="." unique_id=1985683591]
 visible = false
 script = ExtResource("20_r5gwg")
-metadata/_custom_type_script = "uid://bleqtvrern3cj"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character1" unique_id=193198242]
 sprite_frames = SubResource("SpriteFrames_7x3b2")
-animation = &"talking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character1" unique_id=1750322798]
+shape = SubResource("RectangleShape2D_bhx41")
 
 [node name="FrontCounter" parent="." unique_id=1140552590 instance=ExtResource("25_q1s1o")]
 visible = false

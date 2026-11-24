@@ -2,37 +2,5 @@
 
 [ext_resource type="Script" uid="uid://bleqtvrern3cj" path="res://scripts/customer.gd" id="1_7n1ij"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7n1ij"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"angry",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"happy",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7n1ij"]
-
-[node name="Customer" type="CharacterBody2D" unique_id=891950362]
-visible = false
+[node name="Customer" type="Node2D" unique_id=1675120808]
 script = ExtResource("1_7n1ij")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2064702978]
-sprite_frames = SubResource("SpriteFrames_7n1ij")
-animation = &"angry"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=828049032]
-shape = SubResource("RectangleShape2D_7n1ij")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1791611802]
-
-[connection signal="child_entered_tree" from="CollisionShape2D" to="." method="_on_collision_shape_2d_child_entered_tree"]

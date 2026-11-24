@@ -1,6 +1,5 @@
 class_name Order extends Node2D
 
-
 var cup_size
 var ingridients
 
