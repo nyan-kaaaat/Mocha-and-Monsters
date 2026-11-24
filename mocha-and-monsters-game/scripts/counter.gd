@@ -15,7 +15,8 @@ func _ready() -> void:
 ## and adds them to a group of customers, can only have 1 at a time
 func _on_customer_spawner_timeout() -> void:
 	if get_tree().get_nodes_in_group("customer").is_empty():
-		var random_customer = randf_range(0, character_list.size())
+		# picks a random customer from the character list and spawns them
+		var random_customer = randi_range(0, character_list.size()-1)
 		customer_instance = character_list[random_customer].instantiate()
 		add_child(customer_instance)
 		add_to_group("customer")
