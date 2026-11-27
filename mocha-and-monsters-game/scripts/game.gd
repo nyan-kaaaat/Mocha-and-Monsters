@@ -1,6 +1,8 @@
 extends Node2D
 
-var order
+var order_instance
+
+var order = preload("res://scenes/order.tscn")
 
 var cup4oz = preload("res://scenes/cup_4_oz.tscn")
 var cup8oz = preload("res://scenes/cup_8_oz.tscn")
@@ -87,3 +89,15 @@ func _on_left_pressed() -> void:
 
 func _on_right_pressed() -> void:
 	print("right")
+
+func spawnCup(cup) -> void:
+	if get_tree().get_nodes_in_group("orders").is_empty():
+		pass
+	var cup_instance = cup.instantiate()
+	cup_instance.position = Vector2(471.0, 343.0)
+	add_child(cup_instance)
+	order_instance.setCup(cup_instance)
+
+func spawnOrder() -> void:
+	pass
+	
