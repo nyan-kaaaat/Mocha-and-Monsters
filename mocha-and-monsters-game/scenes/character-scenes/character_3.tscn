@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bnx3tgtcv3kci"]
+
+[ext_resource type="Script" uid="uid://d6lgpr5byyi0" path="res://scenes/character_3.gd" id="1_hwqbx"]
+[ext_resource type="Texture2D" uid="uid://dbum5rdjut68j" path="res://assets/character-sprites/MnM-dog-sprite.png" id="2_6wthn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]
+atlas = ExtResource("2_6wthn")
+region = Rect2(3600, 0, 1200, 2328)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qouja"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgl2t")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(1222, 2131)
+
+[node name="Character3" type="CharacterBody2D" unique_id=1860889835]
+position = Vector2(921, 319.99997)
+scale = Vector2(0.33067337, 0.30694672)
+script = ExtResource("1_hwqbx")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1549244889]
+sprite_frames = SubResource("SpriteFrames_qouja")
+animation = &"sad"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1912577161]
+position = Vector2(9, 137.5)
+shape = SubResource("RectangleShape2D_wljb1")

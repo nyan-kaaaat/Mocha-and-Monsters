@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://fhums7yi2a8x" path="res://scenes/character-scenes/character_1.tscn" id="26_bhx41"]
 [ext_resource type="PackedScene" uid="uid://cvxvklxt31dlf" path="res://scenes/character-scenes/character_2.tscn" id="27_sww3w"]
 [ext_resource type="Script" uid="uid://bd62qe0dmp5pw" path="res://scenes/character-scenes/character_2.gd" id="28_suyxu"]
+[ext_resource type="PackedScene" uid="uid://bnx3tgtcv3kci" path="res://scenes/character-scenes/character_3.tscn" id="29_suyxu"]
 
 [node name="Game" type="Node2D" unique_id=498613444]
 script = ExtResource("1_ipyyi")
@@ -275,7 +276,11 @@ visible = false
 visible = false
 
 [node name="Character2" parent="FrontCounter/Customer" unique_id=1700620167 instance=ExtResource("27_sww3w")]
+visible = false
 script = ExtResource("28_suyxu")
+
+[node name="Character3" parent="FrontCounter/Customer" unique_id=1860889835 instance=ExtResource("29_suyxu")]
+visible = false
 
 [connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]

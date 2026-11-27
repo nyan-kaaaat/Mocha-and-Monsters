@@ -1,12 +1,12 @@
 extends Node2D
 
-var customer = preload("res://scenes/character-scenes/customer.tscn")
-var customer1 = preload("res://scenes/character-scenes/character_1.tscn")
-var customer2 = preload("res://scenes/character-scenes/character_2.tscn")
+var medusa = preload("res://scenes/character-scenes/character_1.tscn")
+var kitty = preload("res://scenes/character-scenes/character_2.tscn")
+var dog = preload("res://scenes/character-scenes/character_3.tscn")
 
 var customer_instance
 
-var character_list = [customer1, customer2]
+var customer_list = [medusa, kitty, dog]
 
 func _ready() -> void:
 	$CustomerSpawner.start()
@@ -16,8 +16,8 @@ func _ready() -> void:
 func _on_customer_spawner_timeout() -> void:
 	if get_tree().get_nodes_in_group("customer").is_empty():
 		# picks a random customer from the character list and spawns them
-		var random_customer = randi_range(0, character_list.size()-1)
-		customer_instance = character_list[random_customer].instantiate()
+		var random_customer = randi_range(0, customer_list.size()-1)
+		customer_instance = customer_list[random_customer].instantiate()
 		add_child(customer_instance)
 		add_to_group("customer")
 		print("customer spawned")
