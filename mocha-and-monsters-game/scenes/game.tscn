@@ -141,6 +141,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TicketOrder" type="Control" parent="UI" unique_id=1255842492]
+z_index = 2
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -182,13 +183,17 @@ offset_top = -79.48001
 offset_right = 299.0
 offset_bottom = 79.51999
 
-[node name="TicketOrderButton" type="Button" parent="UI" unique_id=1163179758]
+[node name="PouringMechanic" type="Control" parent="UI" unique_id=640137389]
+z_index = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="UI/PouringMechanic" unique_id=549021328]
 layout_mode = 0
-offset_left = 330.0
-offset_top = 405.0
-offset_right = 434.0
-offset_bottom = 436.0
-text = "Order Ticket"
+offset_left = 853.0
+offset_right = 1153.0
+offset_bottom = 650.0
 
 [node name="Ingredient Cabinet" type="Control" parent="." unique_id=223028646]
 layout_mode = 3
@@ -284,6 +289,13 @@ scale = Vector2(0.27002296, 0.37092626)
 icon = ExtResource("15_qmxlg")
 flat = true
 
+[node name="TicketOrderButton" type="Button" parent="." unique_id=1163179758]
+offset_left = 330.0
+offset_top = 405.0
+offset_right = 434.0
+offset_bottom = 436.0
+text = "Order Ticket"
+
 [node name="Food" type="Node2D" parent="." unique_id=1979279501]
 script = ExtResource("23_sgl2t")
 
@@ -310,7 +322,6 @@ visible = false
 [connection signal="pressed" from="CoffeeMaker/Cup12OzButton" to="." method="_on_cup_size_medium_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup16OzButton" to="." method="_on_cup_size_large_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup20OzButtton" to="." method="_on_cup_size_largest_pressed"]
-[connection signal="pressed" from="UI/TicketOrderButton" to="." method="_on_ticket_order_button_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupFlowerButton" to="." method="_on_get_ingredient_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonBean" to="." method="_on_syrup_button_bean_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonCube" to="." method="_on_syrup_button_cube_pressed"]
@@ -318,3 +329,4 @@ visible = false
 [connection signal="pressed" from="Ingredient Cabinet/Matcha" to="." method="_on_matcha_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/BlackTea" to="." method="_on_black_tea_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/GreenTea" to="." method="_on_green_tea_pressed"]
+[connection signal="pressed" from="TicketOrderButton" to="." method="_on_ticket_order_button_pressed"]
