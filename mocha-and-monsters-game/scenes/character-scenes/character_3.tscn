@@ -27,7 +27,7 @@ animations = [{
 size = Vector2(1222, 2131)
 
 [node name="Character3" type="CharacterBody2D" unique_id=1860889835]
-position = Vector2(921, 319.99997)
+position = Vector2(580, 322)
 scale = Vector2(0.33067337, 0.30694672)
 script = ExtResource("1_hwqbx")
 metadata/_edit_group_ = true

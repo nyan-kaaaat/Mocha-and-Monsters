@@ -42,15 +42,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
-size = Vector2(1517, 2477)
+size = Vector2(1270.6584, 2393.3723)
 
 [node name="Character2" type="CharacterBody2D" unique_id=1700620167]
-position = Vector2(936, 363)
+position = Vector2(625.00006, 345)
 scale = Vector2(0.33259794, 0.2791169)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1278798889]
 sprite_frames = SubResource("SpriteFrames_qouja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903178127]
-position = Vector2(-239.5, 95.5)
+position = Vector2(-116.32922, 53.686157)
 shape = SubResource("RectangleShape2D_wljb1")
