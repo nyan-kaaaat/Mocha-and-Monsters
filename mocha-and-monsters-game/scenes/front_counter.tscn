@@ -7,6 +7,19 @@
 [node name="FrontCounter" type="Node2D" unique_id=1140552590]
 script = ExtResource("1_0kkvl")
 
+[node name="FrontDesk" type="CanvasLayer" parent="." unique_id=340949405]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="FrontDesk" unique_id=846088590]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+texture = ExtResource("2_jeiy4")
+expand_mode = 1
+
 [node name="Background" type="CanvasLayer" parent="." unique_id=1423769045]
 layer = -1
 visible = false
@@ -19,18 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_uim2c")
-expand_mode = 1
-
-[node name="FrontDesk" type="CanvasLayer" parent="." unique_id=340949405]
-visible = false
-
-[node name="TextureRect" type="TextureRect" parent="FrontDesk" unique_id=846088590]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_jeiy4")
 expand_mode = 1
 
 [node name="CustomerSpawner" type="Timer" parent="." unique_id=2112519251]

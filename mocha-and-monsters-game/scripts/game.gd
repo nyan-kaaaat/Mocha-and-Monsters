@@ -14,11 +14,13 @@ func spawnCup(cup) -> void:
 	# Note: consider the case where the player switches the cup size of an order object
 	if get_tree().get_nodes_in_group("orders").is_empty():
 		spawnOrder()
+	else:
+		print("cup spawned")
 	var cup_instance = cup.instantiate()
 	cup_instance.position = Vector2(471.0, 343.0)
 	add_child(cup_instance)
 	order_instance.setCup(cup_instance)
-	print("cup spawned")
+	
 
 func spawnOrder() -> void:
 	order_instance = order.instantiate()

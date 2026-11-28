@@ -48,20 +48,20 @@ size_flags_horizontal = 0
 texture = ExtResource("2_bhx41")
 expand_mode = 1
 
-[node name="CoffeeMaker" type="Control" parent="KitchenBackground" unique_id=579242603]
+[node name="CoffeeMaker" type="Control" parent="." unique_id=579242603]
 z_index = 1
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Cup4OzButton" type="Button" parent="KitchenBackground/CoffeeMaker" unique_id=500526207]
+[node name="Cup4OzButton" type="Button" parent="CoffeeMaker" unique_id=500526207]
 z_as_relative = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 338.0
+offset_left = 370.0
 offset_top = 139.0
-offset_right = 394.0
+offset_right = 426.0
 offset_bottom = 212.0
 grow_horizontal = 0
 size_flags_vertical = 0
@@ -69,65 +69,64 @@ icon = ExtResource("2_2pce8")
 flat = true
 expand_icon = true
 
-[node name="Cup8OzButton" type="Button" parent="KitchenBackground/CoffeeMaker" unique_id=1593990591]
+[node name="Cup8OzButton" type="Button" parent="CoffeeMaker" unique_id=1593990591]
 layout_mode = 0
-offset_left = 388.0
-offset_top = 120.0
-offset_right = 443.0
-offset_bottom = 227.0
+offset_left = 419.0
+offset_top = 125.0
+offset_right = 474.0
+offset_bottom = 232.0
 icon = ExtResource("3_ae8tl")
 flat = true
 expand_icon = true
 
-[node name="Cup12OzButton" type="Button" parent="KitchenBackground/CoffeeMaker" unique_id=13710041]
+[node name="Cup12OzButton" type="Button" parent="CoffeeMaker" unique_id=13710041]
 layout_mode = 0
-offset_left = 436.0
-offset_top = 119.0
-offset_right = 487.0
-offset_bottom = 206.0
+offset_left = 464.0
+offset_top = 125.0
+offset_right = 515.0
+offset_bottom = 212.0
 size_flags_horizontal = 4
 icon = ExtResource("4_22b6i")
 flat = true
 expand_icon = true
 
-[node name="Cup16OzButton" type="Button" parent="KitchenBackground/CoffeeMaker" unique_id=280844436]
+[node name="Cup16OzButton" type="Button" parent="CoffeeMaker" unique_id=280844436]
 layout_mode = 0
-offset_left = 481.0
-offset_top = 100.0
-offset_right = 540.0
-offset_bottom = 216.0
+offset_left = 510.0
+offset_top = 106.0
+offset_right = 569.0
+offset_bottom = 222.0
 icon = ExtResource("5_0moje")
 flat = true
 expand_icon = true
 
-[node name="Cup20OzButtton" type="Button" parent="KitchenBackground/CoffeeMaker" unique_id=410544508]
+[node name="Cup20OzButtton" type="Button" parent="CoffeeMaker" unique_id=410544508]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 89.0
-offset_right = 600.0
-offset_bottom = 220.0
+offset_left = 563.0
+offset_top = 94.0
+offset_right = 628.0
+offset_bottom = 225.0
 icon = ExtResource("6_1jx18")
 flat = true
 expand_icon = true
 
-[node name="Cup4Oz" parent="KitchenBackground/CoffeeMaker" unique_id=677470892 instance=ExtResource("8_1uis1")]
+[node name="Cup4Oz" parent="CoffeeMaker" unique_id=677470892 instance=ExtResource("8_1uis1")]
 visible = false
 position = Vector2(471, 343)
 
-[node name="Cup8Oz" parent="KitchenBackground/CoffeeMaker" unique_id=53636999 instance=ExtResource("9_r5gwg")]
+[node name="Cup8Oz" parent="CoffeeMaker" unique_id=53636999 instance=ExtResource("9_r5gwg")]
 visible = false
 
-[node name="Cup12Oz" parent="KitchenBackground/CoffeeMaker" unique_id=816012366 instance=ExtResource("10_jgv1u")]
+[node name="Cup12Oz" parent="CoffeeMaker" unique_id=816012366 instance=ExtResource("10_jgv1u")]
 visible = false
 
-[node name="Cup16Oz" parent="KitchenBackground/CoffeeMaker" unique_id=642594354 instance=ExtResource("11_q1s1o")]
+[node name="Cup16Oz" parent="CoffeeMaker" unique_id=642594354 instance=ExtResource("11_q1s1o")]
 visible = false
 
-[node name="Cup20Oz" parent="KitchenBackground/CoffeeMaker" unique_id=1489143016 instance=ExtResource("12_c0t26")]
+[node name="Cup20Oz" parent="CoffeeMaker" unique_id=1489143016 instance=ExtResource("12_c0t26")]
 visible = false
 
-[node name="ExpressoMachine" type="TextureRect" parent="KitchenBackground/CoffeeMaker" unique_id=1976278824]
-z_index = -1
+[node name="ExpressoMachine" type="TextureRect" parent="CoffeeMaker" unique_id=1976278824]
 layout_mode = 0
 offset_left = 340.0
 offset_top = 145.0
@@ -293,11 +292,11 @@ script = ExtResource("28_suyxu")
 [node name="Character3" parent="FrontCounter/Customer" unique_id=1860889835 instance=ExtResource("29_suyxu")]
 visible = false
 
-[connection signal="pressed" from="KitchenBackground/CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
-[connection signal="pressed" from="KitchenBackground/CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
-[connection signal="pressed" from="KitchenBackground/CoffeeMaker/Cup12OzButton" to="." method="_on_cup_size_medium_pressed"]
-[connection signal="pressed" from="KitchenBackground/CoffeeMaker/Cup16OzButton" to="." method="_on_cup_size_large_pressed"]
-[connection signal="pressed" from="KitchenBackground/CoffeeMaker/Cup20OzButtton" to="." method="_on_cup_size_largest_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup4OzButton" to="." method="_on_cup_size_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup8OzButton" to="." method="_on_cup_size_small_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup12OzButton" to="." method="_on_cup_size_medium_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup16OzButton" to="." method="_on_cup_size_large_pressed"]
+[connection signal="pressed" from="CoffeeMaker/Cup20OzButtton" to="." method="_on_cup_size_largest_pressed"]
 [connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
 [connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
