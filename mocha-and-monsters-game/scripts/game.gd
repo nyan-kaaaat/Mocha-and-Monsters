@@ -71,15 +71,6 @@ func _on_cup_size_large_pressed() -> void:
 func _on_cup_size_largest_pressed() -> void:
 	spawnCup(cup20oz)
 
-
-# UI dopdown buttons
-func _on_up_pressed() -> void:
-	print("up")
-
-
-func _on_left_pressed() -> void:
-	print("left")
-
-
-func _on_right_pressed() -> void:
-	print("right")
+# manipulates the visibility of the order ticket
+func _on_ticket_order_button_pressed() -> void:
+	pass # Replace with function body.

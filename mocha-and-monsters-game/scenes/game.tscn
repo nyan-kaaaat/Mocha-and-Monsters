@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://bugltn5wp5yjj" path="res://scenes/cup_16_oz.tscn" id="11_q1s1o"]
 [ext_resource type="Texture2D" uid="uid://crqaiakqdw0pu" path="res://assets/syrup_labels.png" id="12_2evmg"]
 [ext_resource type="PackedScene" uid="uid://def0ts504hm3" path="res://scenes/cup_20_oz.tscn" id="12_c0t26"]
-[ext_resource type="Texture2D" uid="uid://bv4b3a5ieie72" path="res://assets/m&m_button.png" id="12_u7811"]
 [ext_resource type="Texture2D" uid="uid://dc1molk3jm47f" path="res://assets/matcha.png" id="13_1uis1"]
 [ext_resource type="Texture2D" uid="uid://b51ycyk01pkes" path="res://assets/m&m-espresso-machine-coloured.png" id="13_6yrg1"]
 [ext_resource type="Texture2D" uid="uid://byj81dicwphic" path="res://assets/tea.png" id="14_mtqyb"]
@@ -59,10 +58,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 370.0
-offset_top = 139.0
-offset_right = 426.0
-offset_bottom = 212.0
+offset_left = 444.0
+offset_top = 144.0
+offset_right = 500.0
+offset_bottom = 217.0
 grow_horizontal = 0
 size_flags_vertical = 0
 icon = ExtResource("2_2pce8")
@@ -71,19 +70,19 @@ expand_icon = true
 
 [node name="Cup8OzButton" type="Button" parent="CoffeeMaker" unique_id=1593990591]
 layout_mode = 0
-offset_left = 419.0
-offset_top = 125.0
-offset_right = 474.0
-offset_bottom = 232.0
+offset_left = 496.0
+offset_top = 126.0
+offset_right = 551.0
+offset_bottom = 233.0
 icon = ExtResource("3_ae8tl")
 flat = true
 expand_icon = true
 
 [node name="Cup12OzButton" type="Button" parent="CoffeeMaker" unique_id=13710041]
 layout_mode = 0
-offset_left = 464.0
+offset_left = 544.0
 offset_top = 125.0
-offset_right = 515.0
+offset_right = 595.0
 offset_bottom = 212.0
 size_flags_horizontal = 4
 icon = ExtResource("4_22b6i")
@@ -92,9 +91,9 @@ expand_icon = true
 
 [node name="Cup16OzButton" type="Button" parent="CoffeeMaker" unique_id=280844436]
 layout_mode = 0
-offset_left = 510.0
+offset_left = 602.0
 offset_top = 106.0
-offset_right = 569.0
+offset_right = 661.0
 offset_bottom = 222.0
 icon = ExtResource("5_0moje")
 flat = true
@@ -102,10 +101,10 @@ expand_icon = true
 
 [node name="Cup20OzButtton" type="Button" parent="CoffeeMaker" unique_id=410544508]
 layout_mode = 0
-offset_left = 563.0
-offset_top = 94.0
-offset_right = 628.0
-offset_bottom = 225.0
+offset_left = 655.0
+offset_top = 92.0
+offset_right = 720.0
+offset_bottom = 223.0
 icon = ExtResource("6_1jx18")
 flat = true
 expand_icon = true
@@ -128,9 +127,9 @@ visible = false
 
 [node name="ExpressoMachine" type="TextureRect" parent="CoffeeMaker" unique_id=1976278824]
 layout_mode = 0
-offset_left = 340.0
-offset_top = 145.0
-offset_right = 673.0
+offset_left = 423.0
+offset_top = 143.0
+offset_right = 756.0
 offset_bottom = 461.0
 texture = ExtResource("13_6yrg1")
 expand_mode = 1
@@ -141,41 +140,55 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Up" type="Button" parent="UI" unique_id=1288729906]
+[node name="TicketOrder" type="Control" parent="UI" unique_id=1255842492]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="UI/TicketOrder" unique_id=1506271421]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 28.711
-anchor_bottom = 16.104
-offset_left = 469.0
-offset_top = -3.0
-offset_right = -453.44006
-offset_bottom = -585.16003
-grow_horizontal = 2
-icon = ExtResource("12_u7811")
-flat = true
-expand_icon = true
+anchor_top = 7.1110005
+anchor_bottom = 7.1110005
+offset_top = -284.44003
+offset_right = 300.0
+offset_bottom = 365.55997
+pivot_offset_ratio = Vector2(0.5, 0)
 
-[node name="Left" type="Button" parent="UI" unique_id=969330424]
-layout_mode = 0
-offset_left = -16.0
-offset_top = 445.0
-offset_right = 219.0
-offset_bottom = 536.573
-rotation = -1.5707964
-icon = ExtResource("12_u7811")
-flat = true
-expand_icon = true
+[node name="Ingredient1" type="CheckBox" parent="UI/TicketOrder" unique_id=623214256]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.9870001
+anchor_bottom = 1.9870001
+offset_top = -79.48
+offset_right = 299.0
+offset_bottom = 79.52
 
-[node name="Right" type="Button" parent="UI" unique_id=163336109]
+[node name="Ingredient2" type="CheckBox" parent="UI/TicketOrder" unique_id=1856172979]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 5.7370005
+anchor_bottom = 5.7370005
+offset_top = -79.48001
+offset_right = 299.0
+offset_bottom = 79.51999
+
+[node name="Ingredient3" type="CheckBox" parent="UI/TicketOrder" unique_id=1776959372]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 9.487
+anchor_bottom = 9.487
+offset_top = -79.48001
+offset_right = 299.0
+offset_bottom = 79.51999
+
+[node name="TicketOrderButton" type="Button" parent="UI" unique_id=1163179758]
 layout_mode = 0
-offset_left = 1163.0
-offset_top = 219.0
-offset_right = 1398.0
-offset_bottom = 299.0
-rotation = 1.5707964
-icon = ExtResource("12_u7811")
-flat = true
-expand_icon = true
+offset_left = 330.0
+offset_top = 405.0
+offset_right = 434.0
+offset_bottom = 436.0
+text = "Order Ticket"
 
 [node name="Ingredient Cabinet" type="Control" parent="." unique_id=223028646]
 layout_mode = 3
@@ -297,9 +310,7 @@ visible = false
 [connection signal="pressed" from="CoffeeMaker/Cup12OzButton" to="." method="_on_cup_size_medium_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup16OzButton" to="." method="_on_cup_size_large_pressed"]
 [connection signal="pressed" from="CoffeeMaker/Cup20OzButtton" to="." method="_on_cup_size_largest_pressed"]
-[connection signal="pressed" from="UI/Up" to="." method="_on_up_pressed"]
-[connection signal="pressed" from="UI/Left" to="." method="_on_left_pressed"]
-[connection signal="pressed" from="UI/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="UI/TicketOrderButton" to="." method="_on_ticket_order_button_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupFlowerButton" to="." method="_on_get_ingredient_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonBean" to="." method="_on_syrup_button_bean_pressed"]
 [connection signal="pressed" from="Ingredient Cabinet/SyrupButtonCube" to="." method="_on_syrup_button_cube_pressed"]
