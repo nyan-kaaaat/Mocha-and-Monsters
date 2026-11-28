@@ -32,3 +32,4 @@ sprite_frames = SubResource("SpriteFrames_l55i8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=596421896]
 position = Vector2(-3.5549316, 11)
 shape = SubResource("RectangleShape2D_47oof")
+script = ExtResource("1_0t6h8")

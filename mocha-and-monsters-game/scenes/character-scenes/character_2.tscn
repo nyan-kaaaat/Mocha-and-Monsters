@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvxvklxt31dlf"]
 
 [ext_resource type="Texture2D" uid="uid://brod16td8x6th" path="res://assets/character-sprites/MnM-kitty-sprite.png" id="1_3ar6c"]
+[ext_resource type="Script" uid="uid://bd62qe0dmp5pw" path="res://scripts/character_2.gd" id="2_q31dg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
 atlas = ExtResource("1_3ar6c")
@@ -54,3 +55,4 @@ sprite_frames = SubResource("SpriteFrames_qouja")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903178127]
 position = Vector2(-116.32922, 53.686157)
 shape = SubResource("RectangleShape2D_wljb1")
+script = ExtResource("2_q31dg")

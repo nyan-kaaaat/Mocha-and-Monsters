@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnx3tgtcv3kci"]
 
-[ext_resource type="Script" uid="uid://d6lgpr5byyi0" path="res://scenes/character_3.gd" id="1_hwqbx"]
+[ext_resource type="Script" uid="uid://d6lgpr5byyi0" path="res://scripts/character_3.gd" id="1_hwqbx"]
 [ext_resource type="Texture2D" uid="uid://dbum5rdjut68j" path="res://assets/character-sprites/MnM-dog-sprite.png" id="2_6wthn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]

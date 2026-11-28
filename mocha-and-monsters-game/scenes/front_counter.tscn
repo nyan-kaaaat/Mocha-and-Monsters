@@ -8,6 +8,7 @@
 script = ExtResource("1_0kkvl")
 
 [node name="FrontDesk" type="CanvasLayer" parent="." unique_id=340949405]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="FrontDesk" unique_id=846088590]
 anchors_preset = 15
@@ -21,6 +22,7 @@ expand_mode = 1
 
 [node name="Background" type="CanvasLayer" parent="." unique_id=1423769045]
 layer = -1
+visible = false
 
 [node name="TextureRect2" type="TextureRect" parent="Background" unique_id=2051842448]
 z_index = -1

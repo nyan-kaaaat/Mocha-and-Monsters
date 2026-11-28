@@ -24,11 +24,11 @@
 [ext_resource type="Texture2D" uid="uid://bcvg0omfc821y" path="res://assets/tea2.png" id="15_qmxlg"]
 [ext_resource type="PackedScene" uid="uid://bu53t2ydphxy5" path="res://scenes/order.tscn" id="18_mtqyb"]
 [ext_resource type="PackedScene" uid="uid://bg4qf71smfhrp" path="res://scenes/character-scenes/customer.tscn" id="23_jgv1u"]
-[ext_resource type="Script" uid="uid://bki2ip3mc2awy" path="res://scenes/food.gd" id="23_sgl2t"]
+[ext_resource type="Script" uid="uid://bki2ip3mc2awy" path="res://scripts/food.gd" id="23_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://cxlj43vfjda4a" path="res://scenes/front_counter.tscn" id="25_q1s1o"]
 [ext_resource type="PackedScene" uid="uid://fhums7yi2a8x" path="res://scenes/character-scenes/character_1.tscn" id="26_bhx41"]
 [ext_resource type="PackedScene" uid="uid://cvxvklxt31dlf" path="res://scenes/character-scenes/character_2.tscn" id="27_sww3w"]
-[ext_resource type="Script" uid="uid://bd62qe0dmp5pw" path="res://scenes/character-scenes/character_2.gd" id="28_suyxu"]
+[ext_resource type="Script" uid="uid://bd62qe0dmp5pw" path="res://scripts/character_2.gd" id="28_suyxu"]
 [ext_resource type="PackedScene" uid="uid://bnx3tgtcv3kci" path="res://scenes/character-scenes/character_3.tscn" id="29_suyxu"]
 
 [node name="Game" type="Node2D" unique_id=498613444]
